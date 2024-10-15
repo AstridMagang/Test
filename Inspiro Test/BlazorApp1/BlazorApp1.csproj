@@ -18,8 +18,4 @@
     <PackageReference Include="MudBlazor" Version="7.12.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Components\NewFolder\" />
-  </ItemGroup>
-
 </Project>
