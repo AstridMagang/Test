@@ -1,6 +1,8 @@
-﻿@using MudBlazor
-@using static MudBlazor.Icons.Material
-@inherits LayoutComponentBase
+﻿@inherits LayoutComponentBase
+
+@* Required *@
+<MudThemeProvider />
+<MudPopoverProvider />
 
 <div class="page">
     @* <div class="sidebar">
@@ -9,11 +11,19 @@
 
     <main>
         <MudGrid>
-            <MudItem xs="12" md="5" Style="background-color: light">
-                <MudPaper Class="pa-3">
-                    <h3>Detail Pesanan : </h3>
-                    <p>Detail Item Yang Di Order : </p>
+            <MudItem xs="12" md="5">
+                <MudPaper Class="pa-5" Style="width:auto; height: auto;">
+                    <h3><u><b>Detail Pesanan</b></u></h3>
+                    <p>Detail Item Yang Di Order</p>
                     <p>Total yang perlu dibayar : </p>
+                    <MudList T="string">
+                        <MudListItem Text="Biskuit" IconColor="Color.Success" Icon="@Icons.Material.Filled.ShoppingCart" />
+                        <MudListItem Text="Chips" IconColor="Color.Success" Icon="@Icons.Material.Filled.ShoppingCart" />
+                        <MudListItem Text="Oreo" IconColor="Color.Success" Icon="@Icons.Material.Filled.ShoppingCart" />
+                        <MudListItem Text="Coklat" IconColor="Color.Success" Icon="@Icons.Material.Filled.ShoppingCart" />
+                        <MudListItem Text="Tanggo" IconColor="Color.Success" Icon="@Icons.Material.Filled.ShoppingCart" />
+                        <MudListItem Text="Air Mineral" IconColor="Color.Success" Icon="@Icons.Material.Filled.ShoppingCart" />
+                    </MudList>
                     <p>Uang yang dibayarkan : </p>
                     <p>Uang yang perlu dikembalikan : </p>
                 </MudPaper>
@@ -25,9 +35,9 @@
                     <MudGrid GutterSize="20px">
 
                         <MudItem xs="12" sm="6" md="4">
-                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                            <MudPaper Class="pa-3" Style="width: 250px; height: 250px;">
                                 <MudImage Src="Images\Biskuit.jpg" Alt="Gambar Biskuit" Style="width: 200px; height: 200px;" />
-                                <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Biskuit</MudText>
+                                <MudText Style="text-align: center;">Biskuit</MudText>
                             </MudPaper>
 
                             <CounterComponent CounterValue="counterValue" OnIncrement="Increment" OnDecrement="Decrement" />
@@ -35,7 +45,7 @@
 
 
                         <MudItem xs="12" sm="6" md="4">
-                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                            <MudPaper Class="pa-3" Style="width: 250px; height: 250px;">
                                 <MudImage Src="Images\Chips.jpg" Alt="Gambar Chips" Style="width: 200px; height: 200px;" />
                                 <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Chips</MudText>
                             </MudPaper>
@@ -45,7 +55,7 @@
                         </MudItem>
 
                         <MudItem xs="12" sm="6" md="4">
-                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                            <MudPaper Class="pa-3" Style="width: 250px; height: 250px;">
                                 <MudImage Src="Images\Coklat.jpg" Alt="Gambar Coklat" Style="width: 200px; height: 200px;" />
                                 <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Coklat</MudText>
                             </MudPaper>
@@ -55,7 +65,7 @@
                         </MudItem>
 
                         <MudItem xs="12" sm="6" md="4">
-                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                            <MudPaper Class="pa-3" Style="width: 250px; height: 250px;">
                                 <MudImage Src="Images\Oreo.jpg" Alt="Gambar Oreo" Style="width: 200px; height: 200px;" />
                                 <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Oreo</MudText>
                             </MudPaper>
@@ -65,7 +75,7 @@
                         </MudItem>
 
                         <MudItem xs="12" sm="6" md="4">
-                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                            <MudPaper Class="pa-3" Style="width: 250px; height: 250px;">
                                 <MudImage Src="Images\Tanggo.jpg" Alt="Gambar Tanggo" Style="width: 200px; height: 200px;" />
                                 <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Tanggo</MudText>
                             </MudPaper>
@@ -75,7 +85,7 @@
                         </MudItem>
 
                         <MudItem xs="12" sm="6" md="4">
-                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                            <MudPaper Class="pa-3" Style="width: 250px; height: 250px;">
                                 <MudImage Src="Images\Air Putih.jpg" Alt="Gambar Air Mineral" Style="width: 200px; height: 200px;" />
                                 <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Air Mineral</MudText>
                             </MudPaper>

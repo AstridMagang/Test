@@ -9,15 +9,15 @@
     public EventCallback OnDecrement { get; set; }
 }
 
-<MudPaper Class="pa-3" Style="margin-top: 50px;">
+<div Style="margin-top: 50px;">
     <!-- Buttons for increment and decrement -->
     <div style="display: flex; justify-content: flex-start;">
-        <MudButton Variant="Variant.Filled" OnClick="OnIncrement" Color="Color.Primary" Style="margin-right: 10px">+</MudButton>
-        <MudButton Variant="Variant.Filled" OnClick="OnDecrement" Color="Color.Secondary">-</MudButton>
+        <MudButton Variant="Variant.Filled" OnClick="OnIncrement" Color="Color.Primary" Style="margin: 5px; 5px; 5px; 5px;">+</MudButton>
+        <MudButton Variant="Variant.Filled" OnClick="OnDecrement" Color="Color.Secondary" Style="margin: 5px; 5px; 5px; 5px;">-</MudButton>
     </div>
 
     <!-- Total value display -->
-    <div style="display: flex; justify-content: flex-start; margin-top: 10px;">
-        <MudText Style="text-align: center;" Typo="Typo.h1">Total: @CounterValue</MudText>
+    <div style="display: flex; justify-content: flex-start;">
+        <MudText Style="text-align: center;" Typo="Typo.h6">Total: @CounterValue</MudText>
     </div>
-</MudPaper>
+</div>
