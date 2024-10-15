@@ -1,0 +1,111 @@
+﻿@using MudBlazor
+@using static MudBlazor.Icons.Material
+@inherits LayoutComponentBase
+
+<div class="page">
+    @* <div class="sidebar">
+    <NavMenu />
+    </div> *@
+
+    <main>
+        <MudGrid>
+            <MudItem xs="12" md="5" Style="background-color: light">
+                <MudPaper Class="pa-3">
+                    <h3>Detail Pesanan : </h3>
+                    <p>Detail Item Yang Di Order : </p>
+                    <p>Total yang perlu dibayar : </p>
+                    <p>Uang yang dibayarkan : </p>
+                    <p>Uang yang perlu dikembalikan : </p>
+                </MudPaper>
+            </MudItem>
+
+            <MudItem xs="12" md="7">
+                <MudPaper Class="p-4" Elevation="4">
+                    <h3>Menu</h3>
+                    <MudGrid GutterSize="20px">
+
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                                <MudImage Src="Images\Biskuit.jpg" Alt="Gambar Biskuit" Style="width: 200px; height: 200px;" />
+                                <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Biskuit</MudText>
+                            </MudPaper>  
+                            
+                            <MudPaper Class="pa-3" Style="margin-top: 50px;">
+                                <!-- Buttons for increment and decrement -->
+                                <div style="display: flex; justify-content: flex-start;">
+                                    <MudButton Variant="Variant.Filled" OnClick="Increment" Color="Color.Primary" Style="margin-right: 10px">+</MudButton>
+                                    <MudButton Variant="Variant.Filled" OnClick="Decrement" Color="Color.Secondary">-</MudButton>
+                                </div>
+
+                                <!-- Total value display -->
+                                <div style="display: flex; justify-content: flex-start; margin-top: 10px;">
+                                    <MudText Style="text-align: center;" Typo="Typo.h1">Total: @counterValue</MudText>
+                                </div>
+                            </MudPaper>
+                        </MudItem>
+
+
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                                <MudImage Src="Images\Chips.jpg" Alt="Gambar Chips" Style="width: 200px; height: 200px;" />
+                                <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Chips</MudText>
+                            </MudPaper>                            
+                        </MudItem>
+
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                                <MudImage Src="Images\Coklat.jpg" Alt="Gambar Coklat" Style="width: 200px; height: 200px;" />
+                                <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Coklat</MudText>
+                            </MudPaper>                            
+                        </MudItem>
+
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                                <MudImage Src="Images\Oreo.jpg" Alt="Gambar Oreo" Style="width: 200px; height: 200px;" />
+                                <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Oreo</MudText>
+                            </MudPaper>                            
+                        </MudItem>
+
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                                <MudImage Src="Images\Tanggo.jpg" Alt="Gambar Tanggo" Style="width: 200px; height: 200px;" />
+                                <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Tanggo</MudText>
+                            </MudPaper>                            
+                        </MudItem>
+
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudPaper Class="pa-3" Style="width: 200px; height: 200px;">
+                                <MudImage Src="Images\Air Putih.jpg" Alt="Gambar Air Mineral" Style="width: 200px; height: 200px;" />
+                                <MudText Style="text-align: center; margin-top: 10px; margin-bottom: 50px">Air Mineral</MudText>
+                            </MudPaper>                            
+                        </MudItem>
+                    </MudGrid>
+
+                </MudPaper>
+
+            </MudItem>
+        </MudGrid>
+
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+@code {
+    private int counterValue = 0;
+
+    private void Increment()
+    {
+        counterValue++;
+    }
+
+    private void Decrement()
+    {
+        if (counterValue > 0)
+            counterValue--;
+    }
+}
